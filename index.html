@@ -221,10 +221,11 @@
             padding: 14px 28px; margin-bottom: 28px;
         }
         .integrations-center span { font-size: 16px; font-weight: 800; color: white; }
-        .integrations-categories { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 14px; }
+        .integrations-categories { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px; }
         .integrations-category { text-align: center; padding: 6px; font-size: 10px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; }
-        .integrations-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+        .integrations-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
         .integration-item {
+            height: 44px; font-size: 13px;
             background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius);
             padding: 12px; font-size: 13px; font-weight: 600; color: var(--text-secondary); transition: all 0.2s;
         }
@@ -512,10 +513,37 @@
     <!-- Solution -->
     <section class="section" id="solutions" style="background: var(--bg-light);">
         <div class="container">
+            <!-- Platform Screenshots -->
             <div style="text-align: center; max-width: 700px; margin: 0 auto 16px;">
-                <span class="section-label">Solutions</span>
-                <h2 class="section-title">Intelligence built in, not bolted on</h2>
+                <span class="section-label">Solution</span>
+                <h3 class="section-title">Dashboards, Reports, and Real-Time Views</h3>
                 <p class="section-subtitle" style="margin: 0 auto;">
+                    Custom reports, role-based dashboards, and live operational views, with JustPark AI built in.
+                </p>
+            </div>
+                <div class="platform-tabs">
+                    <div class="platform-tab active" data-target="tab-dashboard">Revenue Analytics</div>
+                    <div class="platform-tab" data-target="tab-heatmap">Heatmap Analysis</div>
+                    <div class="platform-tab" data-target="tab-map">Map View</div>
+                </div>
+                <div class="platform-screenshot active" id="tab-dashboard">
+                    <img src="images/revenue-chart.png" alt="JP Insights Revenue Analytics">
+                    <div class="caption">Daily revenue by system with multi-vendor breakdown and predictive forecasting</div>
+                </div>
+                <div class="platform-screenshot" id="tab-heatmap">
+                    <img src="images/heatmap.png" alt="JP Insights Heatmap Analysis">
+                    <div class="caption">Delta heatmap with AI analysis: one of hundreds of built-in report types</div>
+                </div>
+                <div class="platform-screenshot" id="tab-map">
+                    <img src="images/map.png" alt="JP Insights Map View">
+                    <div class="caption">Real-time map view: monitor occupancy, revenue, and performance across every location</div>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div style="margin-top: 56px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <h3 class="section-title">Intelligence built in, not bolted on</h3>
+                <p class="section-subtitle" style="margin: 0 auto 24px;">
                     Every chart has a JustPark AI button. A global assistant answers questions in plain English across all your vendors and locations. Every response references your actual data, with full transparency.
                 </p>
             </div>
@@ -537,7 +565,7 @@
                     Predictions and forecasting
                 </div>
             </div>
-            <div style="background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 6px; box-shadow: var(--shadow-xl);">
+            <div style="background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 6px; box-shadow: var(--shadow-xl); max-width: 1024px; margin: 0 auto;">
                 <img src="images/canvas.png" alt="JP Insights AI Assistant" style="width: 100%; border-radius: var(--radius-lg); display: block;">
             </div>
 
@@ -578,29 +606,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Platform Screenshots -->
-            <div style="margin-top: 56px;">
-                <h3 style="text-align: center; font-size: 20px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">Dashboards, Reports, and Real-Time Views</h3>
-                <p style="text-align: center; font-size: 14px; color: var(--text-secondary); max-width: 520px; margin: 0 auto 24px;">Custom reports, role-based dashboards, and live operational views. AI writes the narrative. You set the format and audience.</p>
-                <div class="platform-tabs">
-                    <div class="platform-tab active" data-target="tab-dashboard">Revenue Analytics</div>
-                    <div class="platform-tab" data-target="tab-heatmap">Heatmap Analysis</div>
-                    <div class="platform-tab" data-target="tab-map">Map View</div>
-                </div>
-                <div class="platform-screenshot active" id="tab-dashboard">
-                    <img src="images/revenue-chart.png" alt="JP Insights Revenue Analytics">
-                    <div class="caption">Daily revenue by system with multi-vendor breakdown and predictive forecasting</div>
-                </div>
-                <div class="platform-screenshot" id="tab-heatmap">
-                    <img src="images/heatmap.png" alt="JP Insights Heatmap Analysis">
-                    <div class="caption">Delta heatmap with AI analysis: one of hundreds of built-in report types</div>
-                </div>
-                <div class="platform-screenshot" id="tab-map">
-                    <img src="images/map.png" alt="JP Insights Map View">
-                    <div class="caption">Real-time map view: monitor occupancy, revenue, and performance across every location</div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -623,49 +628,37 @@
                     <div class="integrations-category">Mobile Pay</div>
                     <div class="integrations-category">Meters & Sensors</div>
                     <div class="integrations-category">LPR & Enforcement</div>
-                    <div class="integrations-category">And More</div>
                 </div>
                 <div class="integrations-grid">
                     <div class="integration-item">TIBA</div>
                     <div class="integration-item">ParkMobile</div>
                     <div class="integration-item">IPS Group</div>
                     <div class="integration-item">Genetec</div>
-                    <div class="integration-item" style="background: var(--primary-light); border-color: var(--primary-50); color: var(--primary); font-weight: 700; text-align: center; display: flex; align-items: center; justify-content: center; font-size: 12px; line-height: 1.4;">Don't see yours?<br><a href="#cta" style="color: var(--primary); text-decoration: underline;">Let's talk</a></div>
                     <div class="integration-item">Amano</div>
                     <div class="integration-item">JustPark</div>
                     <div class="integration-item">Duncan</div>
                     <div class="integration-item">Gtechna</div>
-                    <div class="integration-item" style="background: var(--primary-light); border-color: var(--primary-50); color: var(--primary); font-size: 12px; text-align: center; display: flex; align-items: center; justify-content: center; line-height: 1.4;">We add new integrations regularly</div>
                     <div class="integration-item">SkiData</div>
                     <div class="integration-item">PayByPhone</div>
                     <div class="integration-item">MacKay</div>
                     <div class="integration-item">T2 Systems</div>
-                    <div class="integration-item" style="border: 1px dashed var(--border); background: transparent;"></div>
                     <div class="integration-item">Flash</div>
                     <div class="integration-item">Passport</div>
                     <div class="integration-item">Cale/Flowbird</div>
                     <div class="integration-item">Conduent</div>
-                    <div class="integration-item" style="border: 1px dashed var(--border); background: transparent;"></div>
                     <div class="integration-item">Scheidt & Bachmann</div>
                     <div class="integration-item">HonkMobile</div>
                     <div class="integration-item">CivicSmart</div>
                     <div class="integration-item">AutoVu</div>
-                    <div class="integration-item" style="border: 1px dashed var(--border); background: transparent;"></div>
                     <div class="integration-item">DESIGNA</div>
                     <div class="integration-item">mPay2Park</div>
                     <div class="integration-item">Meter Feeder</div>
                     <div class="integration-item">Vigilant</div>
-                    <div class="integration-item" style="border: 1px dashed var(--border); background: transparent;"></div>
                     <div class="integration-item">HUB</div>
-                    <div class="integration-item">Whoosh</div>
                     <div class="integration-item">Cleverciti</div>
-                    <div class="integration-item">NDC/Quercus</div>
-                    <div class="integration-item" style="border: 1px dashed var(--border); background: transparent;"></div>
+                    <div class="integration-item">Parkonect</div>
                     <div class="integration-item">WPS Parking</div>
                     <div class="integration-item">ParkWhiz</div>
-                    <div class="integration-item">Parkonect</div>
-                    <div class="integration-item">Xerox/Conduent</div>
-                    <div class="integration-item" style="border: 1px dashed var(--border); background: transparent;"></div>
                 </div>
                 <p class="integrations-count">
                     <strong>60+ integration partners</strong> · <strong>450+ data connections</strong> · Multiple vendors per location fully supported
